@@ -1,68 +1,66 @@
+@import url(./fonts.css);
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layout + grid/flex items > page layout > components
+
+Here, we use em instead of rem because rem fail here in their usage. 1em = 16px (usually)
+*/
+
+html {
+  font-size: 62.5%;
+
+  /* 
+  // 1rem = 10px, 10/16 = 62.5%
+  // This defines what 1rem is
+  // = 10px; This is 62.5% of default font-size of the browser which usually is 16px
+  */
+}
+
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 56.25%; /* // 1rem = 9px, 9/16 = 56.25% */
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 50%; /* // 1rem = 8px, 8/16 = 50% */
+  }
+}
+
+@media only screen and (min-width: 112.5em) {
+  html {
+    font-size: 75%; /* // 1rem = 12px, 12/16 = 75% */
+  }
+}
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+  --dark-bg-color: #000000;
+  --white-font-color: #ffffff;
+  --green-color: #16e0bd;
+  --purple-color: #b953ff;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+  background-color: var(--dark-bg-color);
 }

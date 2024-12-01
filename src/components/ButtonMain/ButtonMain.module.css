@@ -1,0 +1,48 @@
+.button {
+  font-size: 2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  border: 4px solid var(--white-font-color);
+
+  background-color: var(--dark-bg-color);
+  background-image: linear-gradient(
+    90deg,
+    var(--green-color),
+    var(--purple-color)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+
+  position: relative; /* Needed for the pseudo-element positioning */
+  overflow: hidden; /* Ensures the shine effect doesn't overflow the button */
+}
+
+/* Shine effect */
+.button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -115%; /* Start the shine effect off-screen */
+  width: 100%;
+  height: 100%;
+  background: rgba(213, 211, 211, 0.726); /* Light white shine effect */
+  transform: skewX(-45deg); /* Add the angled shine */
+  transition: transform 0.3s ease;
+  z-index: 1; /* Ensure it sits above the text but below any future content */
+}
+
+/* Animation */
+.button:hover::after {
+  animation: shine 0.4s linear;
+}
+
+@keyframes shine {
+  from {
+    left: -100%; /* Start from outside the left of the button */
+  }
+  to {
+    left: 100%; /* Move across to the right side */
+  }
+}

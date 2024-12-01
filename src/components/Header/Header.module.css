@@ -1,0 +1,47 @@
+.header {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.headerTextContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 70%;
+}
+
+.heading {
+  font-size: 7rem;
+  background-image: linear-gradient(
+    90deg,
+    var(--green-color),
+    var(--purple-color)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.aboutText {
+  font-size: 1.6rem;
+  /* width: 68%; */
+  text-align: justify;
+  padding-top: 2rem;
+
+  background-image: linear-gradient(
+    90deg,
+    var(--green-color),
+    var(--purple-color)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.image {
+  width: 80vh;
+}
