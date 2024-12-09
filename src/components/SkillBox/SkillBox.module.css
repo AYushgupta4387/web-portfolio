@@ -4,31 +4,31 @@
   font-size: 3.5rem;
 }
 
-.coolAboutMeSkillBox {
+.aboutMeSkillBox {
   padding: 1rem;
   margin-bottom: 1rem;
   max-width: 400px;
 }
 
 @media only screen and (max-width: 37.5em) {
-  .coolAboutMeSkillBox {
+  .aboutMeSkillBox {
     max-width: 300px;
   }
 }
 
-.coolAboutMeSkillBoxAdv {
+.aboutMeSkillBoxAdv {
   border: 2px solid #16e0bd;
 }
 
-.coolAboutMeSkillBoxInt {
+.aboutMeSkillBoxInt {
   border: 2px solid #b953ff;
 }
 
-.coolAboutMeSkillBoxNovice {
+.aboutMeSkillBoxNovice {
   border: 2px solid #4452fb;
 }
 
-.coolAboutMeSkillsContainer {
+.aboutMeSkillsContainer {
   display: flex;
   flex-wrap: wrap;
 }

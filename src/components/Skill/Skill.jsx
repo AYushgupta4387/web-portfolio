@@ -2,15 +2,15 @@ import PropTypes from "prop-types";
 import styles from "./Skill.module.css";
 
 const typeStyles = {
-  advance: "coolAboutMeSkillAdv",
-  intermediate: "coolAboutMeSkillInt",
-  novice: "coolAboutMeSkillNovice",
+  advance: "aboutMeSkillAdv",
+  intermediate: "aboutMeSkillInt",
+  novice: "aboutMeSkillNovice",
 };
 
 function Skill({ text, type }) {
   return (
     <span
-      className={`${styles.coolAboutMeSkill} ${
+      className={`${styles.aboutMeSkill} ${
         styles[typeStyles[type]]
       } open-sans-700`}
     >

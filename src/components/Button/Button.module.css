@@ -1,9 +1,10 @@
-.button {
+.mainButton {
   font-size: 2rem;
   border-radius: 10px;
   cursor: pointer;
   padding: 1rem 2rem;
   border: 4px solid var(--white-font-color);
+  margin: 2rem 0;
 
   background-color: var(--dark-bg-color);
   background-image: linear-gradient(
@@ -20,7 +21,7 @@
 }
 
 /* Shine effect */
-.button::after {
+.mainButton::after {
   content: "";
   position: absolute;
   top: 0;
@@ -34,8 +35,41 @@
 }
 
 /* Animation */
-.button:hover::after {
+.mainButton:hover::after {
   animation: shine 0.4s linear;
+}
+
+.secondaryButton {
+  font-size: 1.6rem;
+  width: 95%;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  border: none;
+  box-shadow: 0 0.5rem #fff;
+  margin-bottom: 0.5rem;
+}
+
+.secondaryButton:hover {
+  box-shadow: 0 0.3rem #fff;
+  transform: translateY(0.2rem);
+}
+
+.secondaryButton:active {
+  box-shadow: 0 0 #fff;
+  transform: translateY(0.3rem);
+}
+
+.bgColorGreen {
+  background-color: var(--green-color);
+}
+
+.bgColorPurple {
+  background-color: var(--purple-color);
+}
+
+.bgColorBlue {
+  background-color: var(--blue-color);
 }
 
 @keyframes shine {

@@ -1,9 +1,9 @@
 import PropTypes from "prop-types";
 
-import SkillBox from "../skillBox/SkillBox";
+import SkillBox from "../../components/skillBox/SkillBox";
 import styles from "./About.module.css";
-import Skill from "../Skill/Skill";
-import ButtonMain from "../ButtonMain/ButtonMain";
+import Skill from "../../components/Skill/Skill";
+import Button from "../../components/Button/Button";
 
 const skills = {
   advance: ["HTML", "CSS", "SCSS", "JavaScript", "React", "Angular"],
@@ -30,7 +30,8 @@ function About({ onClickStart }) {
   };
 
   return (
-    <div className={styles.coolAboutMeTextBox}>
+    <div className={styles.aboutMeTextBox}>
+      {/* Using the skills object as an array of arrays. */}
       {Object.keys(skills).map((level) => (
         <SkillBox
           key={level}
@@ -42,8 +43,12 @@ function About({ onClickStart }) {
         </SkillBox>
       ))}
 
-      <ButtonMain onClick={handlePrev}>Previous</ButtonMain>
-      <ButtonMain onClick={handleNext}>Next</ButtonMain>
+      <Button buttonClass="mainButton" onClick={handlePrev}>
+        Previous
+      </Button>
+      <Button buttonClass="mainButton" onClick={handleNext}>
+        Next
+      </Button>
     </div>
   );
 }

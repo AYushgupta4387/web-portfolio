@@ -1,18 +1,18 @@
-.coolAboutMeSkill {
+.aboutMeSkill {
   border-radius: 2px;
   color: black;
   padding: 2px 8px;
   margin: 2px;
 }
 
-.coolAboutMeSkillAdv {
+.aboutMeSkillAdv {
   background-color: #16e0bd;
 }
 
-.coolAboutMeSkillInt {
+.aboutMeSkillInt {
   background-color: #b953ff;
 }
 
-.coolAboutMeSkillNovice {
+.aboutMeSkillNovice {
   background-color: #4452fb;
 }
