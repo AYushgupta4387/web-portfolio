@@ -1,8 +1,13 @@
-# React + Vite
+- Add go to skills, go to exp, how to contact me buttons on the first page, make it cool. Just change the state to a number directly (to a specific number) and add those pages in the pages folder. ✅
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- Create a custom hook to use local storage and use it to sync the current open page with local storage so it doesn't change on reload. ❌ (Discarded, rather using react router)
 
-Currently, two official plugins are available:
+- Create a page for projects and rename about to aboutAndSkills
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Add a surprise me button (its content changes every 5 seconds)
+
+- Make the navigation-bar universal
+
+- Make the resume like a Gameboy
+
+- Add a button in the home screen to play a random game developed by me. Add an info button to that button. Research about optimization techniques for the games code.
