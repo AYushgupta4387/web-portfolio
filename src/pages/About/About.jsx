@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-import SkillBox from "../../components/skillBox/SkillBox";
+import SkillBox from "../../components/SkillBox/SkillBox";
 import styles from "./About.module.css";
 import Skill from "../../components/Skill/Skill";
 import Button from "../../components/Button/Button";
