@@ -30,6 +30,7 @@ export default function Experience() {
   return (
     <div className={styles.experienceContainer}>
       <h1 className={`${styles.mainHeading} open-sans-700`}>Experience</h1>
+
       <div className={styles.expTabsContainer}>
         {companys.map((elem, index) => {
           return (
