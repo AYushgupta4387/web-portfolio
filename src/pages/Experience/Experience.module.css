@@ -1,0 +1,52 @@
+.experienceContainer {
+  padding: 3rem 3rem 22vh;
+}
+
+.mainHeading {
+  font-size: 5rem;
+  color: #4452fb;
+  margin: 1rem 0 3rem;
+  text-align: center;
+}
+
+.expTabsContainer {
+  display: flex;
+  gap: 2rem;
+  padding: 0 2rem;
+  overflow-x: scroll;
+  margin-bottom: 3rem;
+}
+
+.expTab {
+  background: transparent;
+  color: #4452fb;
+  border: 2px solid #4452fb;
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  font-size: 2.4rem;
+}
+
+.selectedExpTab {
+  background: #4452fb;
+  color: white;
+}
+
+.expTextContainer {
+  font-size: 2.4rem;
+  color: #faeaa9;
+  padding: 3rem;
+  border: 3px solid rgb(48, 48, 48);
+  border-radius: 1rem;
+  background-color: #1f1f1f;
+
+  -webkit-box-shadow: inset 0px 3px 13px 5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: inset 0px 3px 13px 5px rgba(0, 0, 0, 0.75);
+  box-shadow: inset 0px 3px 13px 5px rgba(0, 0, 0, 0.75);
+}
+
+.expTextContainer p {
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
