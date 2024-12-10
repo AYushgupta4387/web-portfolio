@@ -1,3 +1,72 @@
 .gameContainer {
   height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid white;
+}
+
+.gameContainer h1 {
+  font-size: 4rem;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.diceImagesContainer {
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5vh;
+}
+
+.diceImage {
+  width: 24vw;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.gameDetailsContainer {
+  color: white;
+  text-align: justify;
+  padding: 3rem;
+  margin: 0 2rem;
+  border: 3px solid rgb(48, 48, 48);
+  border-radius: 1rem;
+  background-color: #1f1f1f;
+
+  -webkit-box-shadow: inset 0px 3px 13px 5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: inset 0px 3px 13px 5px rgba(0, 0, 0, 0.75);
+  box-shadow: inset 0px 3px 13px 5px rgba(0, 0, 0, 0.75);
+}
+
+.gameDetailsContainer h2 {
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+}
+
+.gameDetailsContainer ol {
+  list-style-position: inside;
+}
+
+.gameDetailsContainer ol > li {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.finishScreenContainer {
+  color: white;
+  font-size: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 3rem 2rem;
+  border: 3px solid rgb(48, 48, 48);
+  border-radius: 1rem;
+  background-color: #1f1f1f;
+
+  -webkit-box-shadow: inset 0px 3px 13px 5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: inset 0px 3px 13px 5px rgba(0, 0, 0, 0.75);
+  box-shadow: inset 0px 3px 13px 5px rgba(0, 0, 0, 0.75);
 }
