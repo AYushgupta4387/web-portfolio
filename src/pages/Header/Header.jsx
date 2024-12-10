@@ -1,46 +1,104 @@
-import PropTypes from "prop-types";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 import styles from "./Header.module.css";
 import Button from "../../components/Button/Button";
+import Modal from "../../components/Modal/Modal";
 
-function Header({ setCurrentPageIndex }) {
-  const onClickStart = function () {
-    setCurrentPageIndex((prev) => prev + 1);
+const specialButtonTexts = ["Try something?", "Surprise Me!"];
+
+function Header() {
+  const [showModal, setShowModal] = useState(false);
+  const [randomText, setRandomText] = useState(specialButtonTexts[0]);
+
+  // Rotate random button text
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setRandomText(specialButtonTexts[Math.floor(Math.random() * 2)]);
+    }, 3000);
+
+    // Cleanup interval on component unmount
+    return () => clearInterval(intervalId);
+  }, []);
+
+  const openModal = () => {
+    setShowModal(true);
   };
 
-  const goTo = function (pageNumber) {
-    setCurrentPageIndex(pageNumber);
+  const closeModal = () => {
+    setShowModal(false);
   };
 
   return (
     <header className={styles.header}>
+      {showModal && (
+        <Modal>
+          <div className={styles.modalTextContainer}>
+            <h2 className={`${styles.modalHeading} open-sans-700`}>
+              What is this special button, you ask?
+            </h2>
+            <p className={`${styles.modalText} open-sans-500`}>
+              Click on it and try playing the game! :)
+            </p>
+          </div>
+
+          <div className={styles.modalButtonsContainer}>
+            <Button buttonClass="mainButton">
+              <Link to="/game">{randomText}</Link>
+            </Button>
+            <Button
+              buttonClass="secondaryButton"
+              onClick={closeModal}
+              customClass="secondaryButtonSmallWidth"
+            >
+              Close
+            </Button>
+          </div>
+        </Modal>
+      )}
+
       <div className={styles.cardContainer}>
+        {/* Text Container */}
         <div className={styles.headerTextContainer}>
           <h1 className={`${styles.heading} open-sans-700`}>
-            Hey there! I am AYush
+            Hey there! I am Ayush
           </h1>
           <p className={`${styles.aboutText} open-sans-500`}>
-            I am a software Developer with the experience in working in React,
-            Angular, typescript, NodeJS and Express. I have done my bachelors in
-            Engineering from BITS Pilani Goa Campus. I am currently working in
+            I am a software developer with experience in React, Angular,
+            TypeScript, Node.js, and Express. I have completed my bachelors in
+            Engineering from BITS Pilani Goa Campus. I am currently working at
             Zapcom Solutions.
           </p>
         </div>
+
+        {/* Buttons Container */}
         <div className={styles.buttonContainer}>
-          <Button onClick={onClickStart} buttonClass="mainButton">
-            Get Started!
+          <div className={styles.specialButtonContainer}>
+            <Button buttonClass="mainButton">
+              <Link to="/game">{randomText}</Link>
+            </Button>
+
+            <div className={styles.infoContainer}>
+              <p onClick={openModal} className={styles.info}>
+                i
+              </p>
+            </div>
+          </div>
+
+          <Button buttonClass="secondaryButton">
+            <Link to="/about">Checkout my Skills</Link>
           </Button>
 
-          <Button onClick={() => goTo(1)} buttonClass="secondaryButton">
-            Checkout my Skills
+          <Button buttonClass="secondaryButton">
+            <Link to="/experience">Checkout my Experience</Link>
           </Button>
 
-          <Button onClick={() => goTo(2)} buttonClass="secondaryButton">
-            Checkout my Experience
+          <Button buttonClass="secondaryButton">
+            <Link to="/projects">Checkout my Projects</Link>
           </Button>
 
-          <Button onClick={() => goTo(3)} buttonClass="secondaryButton">
-            Contact Me
+          <Button buttonClass="secondaryButton">
+            <Link to="/contact">Contact Me</Link>
           </Button>
         </div>
       </div>
@@ -49,9 +107,5 @@ function Header({ setCurrentPageIndex }) {
     </header>
   );
 }
-
-Header.propTypes = {
-  setCurrentPageIndex: PropTypes.func,
-};
 
 export default Header;

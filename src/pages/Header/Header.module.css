@@ -7,6 +7,26 @@
   padding: 2rem;
 }
 
+.modalTextContainer {
+  color: white;
+}
+
+.modalHeading {
+  font-size: 3.6rem;
+  margin-bottom: 1rem;
+}
+
+.modalText {
+  font-size: 2rem;
+}
+
+.modalButtonsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5vh;
+}
+
 .cardContainer {
   width: 70%;
   background-image: radial-gradient(
@@ -59,11 +79,29 @@
   gap: 1rem;
 }
 
-/* .rightArrow {
-  width: 5vw;
-  vertical-align: bottom;
-  margin-left: 1rem;
-} */
+.specialButtonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3vw;
+}
+
+.infoContainer {
+  width: 4vh;
+  height: 4vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid white;
+  border-radius: 50%;
+  opacity: 0.5;
+  text-align: center;
+}
+
+.info {
+  font-size: 16px;
+  color: white;
+}
 
 .image {
   width: 80vh;
@@ -76,7 +114,6 @@
 
   .cardContainer {
     width: 90vw;
-    height: 60vh;
     display: flex;
     flex-direction: column;
     align-items: flex-start;

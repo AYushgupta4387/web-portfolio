@@ -6,7 +6,8 @@ import Header from "./pages/Header/Header";
 import About from "./pages/About/About";
 import Experience from "./pages/Experience/Experience";
 import ContactMe from "./pages/ContactMe/ContactMe";
-import Projects from "./pages/Projects/Projects"; // Corrected import
+import Projects from "./pages/Projects/Projects";
+import Game from "./pages/Game/Game";
 import PageNotFound from "./pages/PageNotFound/PageNotFound";
 
 import PageNavigation from "./components/PageNavigation/PageNavigation";
@@ -21,6 +22,7 @@ function App() {
           <Route path="/experience" element={<Experience />} />
           <Route path="/contact" element={<ContactMe />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/game" element={<Game />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
         <ConditionalNavigation /> {/* Conditionally renders the navigation */}

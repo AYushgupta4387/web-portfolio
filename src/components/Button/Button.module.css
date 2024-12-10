@@ -3,10 +3,15 @@
   border-radius: 10px;
   cursor: pointer;
   padding: 1rem 2rem;
-  border: 4px solid var(--white-font-color);
   margin: 2rem 0;
-
+  border: 4px solid var(--white-font-color);
   background-color: var(--dark-bg-color);
+
+  position: relative; /* Needed for the pseudo-element positioning */
+  overflow: hidden; /* Ensures the shine effect doesn't overflow the button */
+}
+
+.mainButton a {
   background-image: linear-gradient(
     90deg,
     var(--green-color),
@@ -15,9 +20,6 @@
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-
-  position: relative; /* Needed for the pseudo-element positioning */
-  overflow: hidden; /* Ensures the shine effect doesn't overflow the button */
 }
 
 /* Shine effect */
@@ -37,6 +39,15 @@
 /* Animation */
 .mainButton:hover::after {
   animation: shine 0.4s linear;
+}
+
+@keyframes shine {
+  from {
+    left: -100%; /* Start from outside the left of the button */
+  }
+  to {
+    left: 100%; /* Move across to the right side */
+  }
 }
 
 .secondaryButton {
@@ -72,11 +83,13 @@
   background-color: var(--blue-color);
 }
 
-@keyframes shine {
-  from {
-    left: -100%; /* Start from outside the left of the button */
-  }
-  to {
-    left: 100%; /* Move across to the right side */
-  }
+.secondaryButton a {
+  text-decoration: none;
+  color: white;
+}
+
+.secondaryButtonSmallWidth {
+  width: auto;
+  height: calc(100% - 4rem);
+  font-size: 2rem;
 }

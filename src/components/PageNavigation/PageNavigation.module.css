@@ -1,6 +1,5 @@
 .navigation {
   height: 10vh;
-  padding: 0 2rem;
   background-color: rgb(25, 24, 42);
 }
 
@@ -58,4 +57,15 @@
 
 .homeButton .imageContainer img {
   height: 5vh;
+}
+
+.gameButtonContainer {
+  list-style: none;
+  position: relative;
+}
+
+.gameButton {
+  position: absolute;
+  bottom: 10vh;
+  right: 4vw;
 }

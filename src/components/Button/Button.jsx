@@ -9,7 +9,7 @@ const secondaryButtonBGColors = [
   "bgColorBlue",
 ];
 
-function Button({ children, onClick, buttonClass }) {
+function Button({ children, onClick, buttonClass, customClass = "" }) {
   // Use `useMemo` to compute the random color only once for the render lifecycle
   const chosenColor = useMemo(() => {
     if (buttonClass === "secondaryButton") {
@@ -24,6 +24,7 @@ function Button({ children, onClick, buttonClass }) {
       onClick={onClick}
       className={`${styles[buttonClass]} 
       ${chosenColor ? styles[chosenColor] : ""} 
+      ${styles[customClass]}
       open-sans-700`}
     >
       {children}
@@ -35,6 +36,7 @@ Button.propTypes = {
   children: PropTypes.node.isRequired, // Ensures `children` is passed
   onClick: PropTypes.func, // Click handler function
   buttonClass: PropTypes.string, // Class name for styling
+  customClass: PropTypes.string,
 };
 
 export default Button;

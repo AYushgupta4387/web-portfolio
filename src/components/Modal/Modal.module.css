@@ -1,0 +1,26 @@
+.modalContainer {
+  height: 100%;
+  width: calc(100% - 8rem);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 10;
+}
+
+.modalContentContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+  margin-bottom: 20vh;
+  padding: 3rem;
+  border: 3px solid rgb(48, 48, 48);
+  border-radius: 1rem;
+  background-color: #1f1f1f;
+
+  -webkit-box-shadow: inset 0px 3px 13px 5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: inset 0px 3px 13px 5px rgba(0, 0, 0, 0.75);
+  box-shadow: inset 0px 3px 13px 5px rgba(0, 0, 0, 0.75);
+}

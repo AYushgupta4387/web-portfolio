@@ -1,5 +1,7 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
+
 import styles from "./PageNavigation.module.css";
+import Button from "../Button/Button";
 
 function PageNavigation() {
   return (
@@ -8,9 +10,11 @@ function PageNavigation() {
         <li className={styles.link}>
           <NavLink to="/about">About</NavLink>
         </li>
+
         <li className={styles.link}>
           <NavLink to="/experience">Experience</NavLink>
         </li>
+
         <li className={styles.homeButton}>
           <div className={styles.imageContainer}>
             <NavLink to="/">
@@ -18,11 +22,21 @@ function PageNavigation() {
             </NavLink>
           </div>
         </li>
+
         <li className={styles.link}>
           <NavLink to="/projects">Projects</NavLink>
         </li>
+
         <li className={styles.link}>
           <NavLink to="/contact">Contact</NavLink>
+        </li>
+
+        <li className={styles.gameButtonContainer}>
+          <div className={styles.gameButton}>
+            <Button buttonClass="mainButton">
+              <Link to="/game">Try me!</Link>
+            </Button>
+          </div>
         </li>
       </ul>
     </nav>
