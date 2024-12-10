@@ -1,3 +1,62 @@
 .aboutMeTextBox {
-  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20vh;
+}
+
+.primaryHeading {
+  font-size: 5rem;
+  color: var(--purple-color);
+  margin: 1rem 0 3rem;
+}
+
+.secondaryHeading {
+  color: #faeaa9;
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.textContainer {
+  border-left: 3px solid #faeaa9;
+  position: relative;
+  text-align: center;
+  font-size: 2rem;
+  width: 300px;
+  padding-bottom: 2rem;
+}
+
+.textContainer p {
+  margin-bottom: 1rem;
+  margin-left: 3rem;
+  font-size: 2rem;
+  color: white;
+  padding: 2rem;
+  background: rgba(20, 20, 21, 0.7);
+}
+
+.textContainer p span {
+  font-weight: bold;
+  color: #faeaa9;
+}
+
+.circle {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  background-color: #b953ff;
+  position: absolute;
+  box-shadow: 0 0.5rem #fff;
+  left: -2.15rem;
+}
+
+.circleTwo {
+  top: 0;
+  left: -2rem;
+}
+
+.skillsContainer {
+  text-align: center;
+  position: relative;
 }

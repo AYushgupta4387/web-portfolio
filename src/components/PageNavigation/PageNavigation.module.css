@@ -1,5 +1,8 @@
 .navigation {
   height: 10vh;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
   background-color: rgb(25, 24, 42);
 }
 
@@ -8,12 +11,11 @@
   height: 100%;
   display: flex;
   justify-content: space-between;
-  gap: 1rem;
 }
 
 .link {
   display: inline-block;
-  width: 20vw;
+  width: 25vw;
   font-size: 1.6rem;
 }
 
@@ -39,11 +41,6 @@
   color: black;
 }
 
-.homeButton {
-  list-style: none;
-  position: relative;
-}
-
 .imageContainer {
   border-radius: 50%;
   padding: 3rem;
@@ -57,11 +54,6 @@
 
 .homeButton .imageContainer img {
   height: 5vh;
-}
-
-.gameButtonContainer {
-  list-style: none;
-  position: relative;
 }
 
 .gameButton {

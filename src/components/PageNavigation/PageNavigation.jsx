@@ -15,13 +15,11 @@ function PageNavigation() {
           <NavLink to="/experience">Experience</NavLink>
         </li>
 
-        <li className={styles.homeButton}>
-          <div className={styles.imageContainer}>
-            <NavLink to="/">
-              <img src="./house-solid.svg" />
-            </NavLink>
-          </div>
-        </li>
+        <div className={styles.imageContainer}>
+          <NavLink to="/">
+            <img src="./house-solid.svg" />
+          </NavLink>
+        </div>
 
         <li className={styles.link}>
           <NavLink to="/projects">Projects</NavLink>
@@ -31,13 +29,11 @@ function PageNavigation() {
           <NavLink to="/contact">Contact</NavLink>
         </li>
 
-        <li className={styles.gameButtonContainer}>
-          <div className={styles.gameButton}>
-            <Button buttonClass="mainButton">
-              <Link to="/game">Try me!</Link>
-            </Button>
-          </div>
-        </li>
+        <div className={styles.gameButton}>
+          <Button buttonClass="mainButton">
+            <Link to="/game">Try me!</Link>
+          </Button>
+        </div>
       </ul>
     </nav>
   );
